@@ -1,0 +1,52 @@
+package prac;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+
+public class Students1 {
+	public static void main(String[] args) {
+		
+		ArrayList<Student> s = new ArrayList<Student>();
+		s.add(new Student(15150, "Soundarya", 14));
+		s.add(new Student(15158, "Sivaji", 15));
+		s.add(new Student(15155, "Ragulkumar", 14));
+		s.add(new Student(15159, "Shyaam", 13));
+		s.add(new Student(15154, "Supreeth", 14));
+
+		Collections.sort(s, new ArrayListCompComp());
+
+		for (Student em : s) {
+			System.out.println(em.rollno + " " + em.fullname + " " + em.age);
+		}
+	}
+}
+
+class Student{
+	int rollno , age;
+	String fullname;
+	
+	public Student(int rollno, String fullname, int age ) {
+		super();
+		this.rollno = rollno;
+		this.age = age;
+		this.fullname = fullname;
+	}
+}
+
+
+class ArrayListCompComp implements Comparator<Student> {
+	public int compare(Student i1, Student i2) {
+		Student org1 = (Student) i1;
+		Student org2 = (Student) i2;
+
+		if (org1.rollno == org2.rollno) {
+			return 0;
+		} else if (org1.rollno > org2.rollno) {
+			return 1;
+		} else {
+			return -1;
+		}
+
+	}
+
+}

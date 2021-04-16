@@ -1,0 +1,23 @@
+package prac;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class Student2 {
+	public static void main(String[] args) {
+		ArrayList<String> roll = new ArrayList<String>();
+		roll.add("It2024");
+		roll.add("It2055");
+		roll.add("It2014");
+		roll.add("It2066");
+		roll.add("It2008");
+
+		/*
+		 * for (String em : roll) { System.out.println(em); }
+		 */
+		System.out.println("RollNumber Details: " + roll);
+
+		Collections.sort(roll, Collections.reverseOrder());
+		System.out.println("RollNumber Details: " + roll);
+	}
+}
