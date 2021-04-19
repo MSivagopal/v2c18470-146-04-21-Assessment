@@ -8,18 +8,18 @@ public class StrRev {
 
 		System.out.print("Enter the string : ");
 		Scanner scanner = new Scanner(System.in);
-		String originalStr = scanner.nextLine();
+		String str = scanner.nextLine();
 
-		String words[] = originalStr.split(" ");
-		String reversedString = "";
+		String str1[] = str.split(" ");
+		String rev = "";
 
-		for (int i = 0; i < words.length; i++) {
-			if (i == words.length - 1)
-				reversedString = words[i] + reversedString;
+		for (int i = 0; i < str1.length; i++) {
+			if (i == str1.length - 1)
+				rev = str1[i] + rev;
 			else
-				reversedString = " " + words[i] + reversedString;
+				rev = " " + str1[i] + rev;
 		}
 
-		System.out.print("Reversed string : " + reversedString);
+		System.out.print("Reversed string : " + rev);
 	}
 }
